@@ -1,0 +1,348 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Aerd</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Aerd</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+  
+  <!-- CSS Styling -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .hero a {
+      text-decoration: none;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background: #0056b3;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .about, .why-us {
+      background: #f4f4f4;
+    }
+
+    .about p, .why-us p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .about ul, .why-us ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .about ul li, .why-us ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .about ul li i, .why-us ul li i {
+      color: #007bff;
+      margin-right: 10px;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #333;
+    }
+
+    .faq-content {
+      display: none;
+      margin-top: 10px;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .faq-toggle {
+      font-size: 1.5rem;
+      transform: rotate(0);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-active .faq-content {
+      display: block;
+    }
+
+    .faq-active .faq-toggle {
+      transform: rotate(90deg);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Welcome to AERD</h1>
+    <p>Innovating Technology, Network Solutions & Services</p>
+    <a href="#about">Learn More</a>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>About Us</h2>
+    </div>
+    <div class="container">
+      <p>AERD (formerly SGS Electronics & Enterprises) has been a trusted name in technology and services since 1992. Starting as a sole proprietorship, AERD has grown into a strong team of professionals and engineers, delivering turnkey projects for both government and private sectors. We specialize in network infrastructure, computer services, and furniture solutions, ensuring quality and excellence for all our clients.</p>
+      <ul>
+        <li><i class="bi bi-check2-circle"></i> Over 30 years of expertise in the industry.</li>
+        <li><i class="bi bi-check2-circle"></i> Extensive experience in government projects and corporate collaborations.</li>
+        <li><i class="bi bi-check2-circle"></i> Authorized distributors of major global technology brands.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section class="why-us" id="why-us">
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+    </div>
+    <div class="container">
+      <p>With decades of experience, certified professionals, and a client-first approach, AERD is the perfect partner for your technology and service needs. We offer comprehensive solutions tailored to the unique requirements of every client.</p>
+      <ul>
+        <li><i class="bi bi-check2-circle"></i> Unmatched expertise in network infrastructure and service integration.</li>
+        <li><i class="bi bi-check2-circle"></i> Proven track record in delivering large-scale government projects.</li>
+        <li><i class="bi bi-check2-circle"></i> End-to-end solutions, including furniture installations and IT services.</li>
+      </ul>
+
+      <!-- FAQ Section -->
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3><span>01</span> What sets us apart from competitors?<i class="faq-toggle">+</i></h3>
+          <div class="faq-content">
+            <p>We combine innovative solutions with practical expertise, ensuring that every project is delivered on time and within budget.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><span>02</span> How do we ensure project success?<i class="faq-toggle">+</i></h3>
+          <div class="faq-content">
+            <p>We follow a structured approach with thorough planning, progress updates, and close client collaboration to ensure all objectives are met efficiently.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <h3><span>03</span> What industries do we serve?<i class="faq-toggle">+</i></h3>
+          <div class="faq-content">
+            <p>We cater to industries including technology, healthcare, manufacturing, and more, with adaptable solutions that meet business needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2024 AERD - All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // FAQ Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('faq-active');
+      });
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

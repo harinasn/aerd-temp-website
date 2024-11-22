@@ -1,26 +1,37 @@
 <?php
-// Enable error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    $human_check = $_POST['human_check'] ?? '';
 
-// Get form fields
-$name = $_POST['name'];
-$email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+    // Simple human check: 3 + 4 should equal 7
+    if ($human_check != '7') {
+        echo "Human check failed!";
+        exit;
+    }
 
-// Set the recipient email
-$to = 'sales@aerd.tech';
+    // Additional form validation
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "Please fill in all required fields.";
+        exit;
+    }
 
-// Create the email headers
-$headers = "From: $name <$email>\r\n";
-$headers .= "Reply-To: $email\r\n";
+    // Email configuration
+    $to = "info@aerd.tech"; // updated email address
+    $subject = "New Contact Form Submission";
+    $headers = "From: " . $email . "\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    $body = "Name: $name\nPhone: $phone\nEmail: $email\nMessage:\n$message";
 
-// Send the email
-if (mail($to, $subject, $message, $headers)) {
-  echo 'Email sent successfully!';
+    // Attempt to send the email
+    if (mail($to, $subject, $body, $headers)) {
+        echo "OK";
+    } else {
+        echo "Failed to send email.";
+    }
 } else {
-  http_response_code(500); // Internal server error
-  echo 'Email sending failed!';
+    echo "Invalid request.";
 }
 ?>
